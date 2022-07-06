@@ -1,0 +1,12 @@
+C:\Users\Usuario\source\repos\Mercado\Mercado.core\bin\Debug\net6.0\Mercado.core.deps.json
+C:\Users\Usuario\source\repos\Mercado\Mercado.core\bin\Debug\net6.0\Mercado.core.dll
+C:\Users\Usuario\source\repos\Mercado\Mercado.core\bin\Debug\net6.0\Mercado.core.pdb
+C:\Users\Usuario\source\repos\Mercado\Mercado.core\obj\Debug\net6.0\Mercado.core.csproj.AssemblyReference.cache
+C:\Users\Usuario\source\repos\Mercado\Mercado.core\obj\Debug\net6.0\Mercado.core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Usuario\source\repos\Mercado\Mercado.core\obj\Debug\net6.0\Mercado.core.AssemblyInfoInputs.cache
+C:\Users\Usuario\source\repos\Mercado\Mercado.core\obj\Debug\net6.0\Mercado.core.AssemblyInfo.cs
+C:\Users\Usuario\source\repos\Mercado\Mercado.core\obj\Debug\net6.0\Mercado.core.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\source\repos\Mercado\Mercado.core\obj\Debug\net6.0\Mercado.core.dll
+C:\Users\Usuario\source\repos\Mercado\Mercado.core\obj\Debug\net6.0\refint\Mercado.core.dll
+C:\Users\Usuario\source\repos\Mercado\Mercado.core\obj\Debug\net6.0\Mercado.core.pdb
+C:\Users\Usuario\source\repos\Mercado\Mercado.core\obj\Debug\net6.0\ref\Mercado.core.dll

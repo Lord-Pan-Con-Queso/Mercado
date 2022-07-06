@@ -1,0 +1,45 @@
+﻿@page
+@model Mercado.UI.Pages.Productos.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Producto</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Producto.ProductoId" />
+            <div class="form-group">
+                <label asp-for="Producto.Nombre" class="control-label"></label>
+                <input asp-for="Producto.Nombre" class="form-control" />
+                <span asp-validation-for="Producto.Nombre" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Producto.Precio" class="control-label"></label>
+                <input asp-for="Producto.Precio" class="form-control" />
+                <span asp-validation-for="Producto.Precio" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Producto.Cantidad" class="control-label"></label>
+                <input asp-for="Producto.Cantidad" class="form-control" />
+                <span asp-validation-for="Producto.Cantidad" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

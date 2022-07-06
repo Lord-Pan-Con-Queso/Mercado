@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32602.215
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mercado.UI", "Mercado.UI\Mercado.UI.csproj", "{586C749E-A232-4C71-8453-12FE88DDDA6E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mercado.core", "Mercado.core\Mercado.core.csproj", "{0081B7FF-FE49-4939-A4A7-1E44C21C570B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{586C749E-A232-4C71-8453-12FE88DDDA6E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{586C749E-A232-4C71-8453-12FE88DDDA6E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{586C749E-A232-4C71-8453-12FE88DDDA6E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{586C749E-A232-4C71-8453-12FE88DDDA6E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0081B7FF-FE49-4939-A4A7-1E44C21C570B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0081B7FF-FE49-4939-A4A7-1E44C21C570B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0081B7FF-FE49-4939-A4A7-1E44C21C570B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0081B7FF-FE49-4939-A4A7-1E44C21C570B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {783C5274-56A0-4F59-A155-D3662616D337}
+	EndGlobalSection
+EndGlobal
