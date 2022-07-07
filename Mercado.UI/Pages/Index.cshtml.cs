@@ -14,7 +14,6 @@ namespace Mercado.UI.Pages
 
         public void OnGet()
         {
-
         }
     }
 }
