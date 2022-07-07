@@ -19,7 +19,7 @@ namespace Mercado.UI.Pages.Proveedores
             _context = context;
         }
 
-      public Proveedor Proveedor { get; set; } = default!; 
+        public Proveedor Proveedor { get; set; } = default!;
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
@@ -27,13 +27,18 @@ namespace Mercado.UI.Pages.Proveedores
             {
                 return NotFound();
             }
+            //Las siguientes líneas sirven para que se muestren los detalles de la marca del producto también.
+            var proveedor = await _context.Proveedor
+                .Include(s => s.ProveedoresxMarcas)
+                .ThenInclude(e => e.Marcas)
+                .AsNoTracking()
+                .FirstOrDefaultAsync(m => m.ProveedorId == id);
 
-            var proveedor = await _context.Proveedor.FirstOrDefaultAsync(m => m.ProveedorId == id);
             if (proveedor == null)
             {
                 return NotFound();
             }
-            else 
+            else
             {
                 Proveedor = proveedor;
             }

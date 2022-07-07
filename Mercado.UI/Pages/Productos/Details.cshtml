@@ -29,7 +29,10 @@
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Producto.Cantidad)
         </dd>
-                <dd class="col-sm-10">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Producto.Marca.NombreMarca)
+        </dt>
+        <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Producto.Marca.NombreMarca)
         </dd>
     </dl>
