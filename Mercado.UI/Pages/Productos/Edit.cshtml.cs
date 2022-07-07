@@ -25,53 +25,37 @@ namespace Mercado.UI.Pages.Productos
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
-            if (id == null || _context.Producto == null)
+            if (id == null)
             {
                 return NotFound();
             }
 
-            var producto =  await _context.Producto.FirstOrDefaultAsync(m => m.ProductoId == id);
-            if (producto == null)
+            Producto =  await _context.Producto.FindAsync(id);
+            if (Producto == null)
             {
                 return NotFound();
             }
-            Producto = producto;
             return Page();
         }
 
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see https://aka.ms/RazorPagesCRUD.
-        public async Task<IActionResult> OnPostAsync()
+        public async Task<IActionResult> OnPostAsync(int id)
         {
-            if (!ModelState.IsValid)
+            var productoToUpdate = await _context.Producto.FindAsync(id);
+            if (productoToUpdate == null)
             {
-                return Page();
+                return NotFound();
             }
-
-            _context.Attach(Producto).State = EntityState.Modified;
-
-            try
+            if (await TryUpdateModelAsync<Producto>(
+            productoToUpdate,
+                "producto",
+            s => s.Nombre, s => s.Precio, s => s.Cantidad, s => s.Marca))
             {
                 await _context.SaveChangesAsync();
+                return RedirectToPage("./Index");
             }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!ProductoExists(Producto.ProductoId))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
-
-            return RedirectToPage("./Index");
-        }
-
-        private bool ProductoExists(int id)
-        {
-          return (_context.Producto?.Any(e => e.ProductoId == id)).GetValueOrDefault();
+            return Page();
         }
     }
 }

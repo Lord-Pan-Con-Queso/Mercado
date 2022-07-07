@@ -15,10 +15,7 @@ namespace Mercado.core.Models
         public int ProveedorId { get; set; }
         [Required]
         public int MarcaId { get; set; }
-        [ForeignKey("ProveedorId")]
         public Proveedor? Proveedores { get; set; }
-
-        [ForeignKey("MarcaId")]
         public Marca? Marcas { get; set; }
     }
 }

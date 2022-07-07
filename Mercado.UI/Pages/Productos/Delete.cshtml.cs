@@ -13,51 +13,58 @@ namespace Mercado.UI.Pages.Productos
     public class DeleteModel : PageModel
     {
         private readonly Mercado.UI.Data.MercadoContext _context;
+        private readonly ILogger<DeleteModel> _logger;
 
-        public DeleteModel(Mercado.UI.Data.MercadoContext context)
+        public DeleteModel(Mercado.UI.Data.MercadoContext context, ILogger<DeleteModel> logger)
         {
             _context = context;
+            _logger = logger;
         }
-
         [BindProperty]
-      public Producto Producto { get; set; } = default!;
+        public Producto Producto { get; set; }
+        public string ErrorMessage { get; set; }
+        public async Task<IActionResult> OnGetAsync(int? id, bool? saveChangesError = false)
 
-        public async Task<IActionResult> OnGetAsync(int? id)
         {
-            if (id == null || _context.Producto == null)
+            if (id == null)
             {
                 return NotFound();
             }
-
-            var producto = await _context.Producto.FirstOrDefaultAsync(m => m.ProductoId == id);
-
-            if (producto == null)
+            Producto = await _context.Producto
+            .AsNoTracking()
+            .FirstOrDefaultAsync(m => m.ProductoId == id);
+            if (Producto == null)
             {
                 return NotFound();
             }
-            else 
+            if (saveChangesError.GetValueOrDefault())
             {
-                Producto = producto;
+                ErrorMessage = String.Format("Delete {ID} failed. Try again", id);
             }
             return Page();
         }
-
         public async Task<IActionResult> OnPostAsync(int? id)
         {
-            if (id == null || _context.Producto == null)
+            if (id == null)
             {
                 return NotFound();
             }
             var producto = await _context.Producto.FindAsync(id);
-
-            if (producto != null)
+            if (producto == null)
             {
-                Producto = producto;
-                _context.Producto.Remove(Producto);
-                await _context.SaveChangesAsync();
+                return NotFound();
             }
-
-            return RedirectToPage("./Index");
+            try
+            {
+                _context.Producto.Remove(producto);
+                await _context.SaveChangesAsync();
+                return RedirectToPage("./Index");
+            }
+            catch (DbUpdateException ex)
+            {
+                _logger.LogError(ex, ErrorMessage);
+                return RedirectToAction("./Delete", new { id, saveChangesError = true });
+            }
         }
     }
 }

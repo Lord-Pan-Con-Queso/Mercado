@@ -26,20 +26,21 @@ namespace Mercado.UI.Pages.Productos
 
         [BindProperty]
         public Producto Producto { get; set; } = default!;
-        
 
         // To protect from overposting attacks, see https://aka.ms/RazorPagesCRUD
         public async Task<IActionResult> OnPostAsync()
         {
-          if (!ModelState.IsValid || _context.Producto == null || Producto == null)
+            var emptyProducto = new Producto();
+            if (await TryUpdateModelAsync<Producto>(
+            emptyProducto,
+            "producto", //Prefijo para el valor del formulario.
+            s => s.Nombre, s => s.Precio, s => s.Cantidad, s => s.Marca))
             {
-                return Page();
+                _context.Producto.Add(emptyProducto);
+                await _context.SaveChangesAsync();
+                return RedirectToPage("./Index");
             }
-
-            _context.Producto.Add(Producto);
-            await _context.SaveChangesAsync();
-
-            return RedirectToPage("./Index");
+            return Page();
         }
     }
 }

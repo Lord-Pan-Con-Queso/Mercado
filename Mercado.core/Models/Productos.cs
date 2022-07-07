@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 //Para hacer el formateo de datos.
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
 
 namespace Mercado.core.Models
 {
@@ -19,7 +21,7 @@ namespace Mercado.core.Models
         public int Precio { get; set; }
         public int Cantidad { get; set; }
         //1 producto tiene 1 Marca.
-        public ICollection<Marca>? Marca { get; set; }
+        public Marca? Marca { get; set; }
     }
 }
 //Relación del .UI con el .Core - Mercado.UI/Agregar/Referencia del Proyecto/Mercado.core

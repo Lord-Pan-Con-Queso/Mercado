@@ -28,6 +28,12 @@
                 <input asp-for="Producto.Cantidad" class="form-control" />
                 <span asp-validation-for="Producto.Cantidad" class="text-danger"></span>
             </div>
+            <!--Para poner el nombre de la marca-->
+            <div class="form-group">
+                <label asp-for="Producto.Marca.NombreMarca" class="control-label"></label>
+                <input asp-for="Producto.Marca.NombreMarca" class="form-control" />
+                <span asp-validation-for="Producto.Marca.NombreMarca" class="text-danger"></span>
+            </div>
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>

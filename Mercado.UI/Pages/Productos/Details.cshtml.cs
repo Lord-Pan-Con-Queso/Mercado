@@ -27,8 +27,12 @@ namespace Mercado.UI.Pages.Productos
             {
                 return NotFound();
             }
+            //Las siguientes líneas sirven para que se muestren los detalles de la marca del producto también.
+            var producto = await _context.Producto
+                .Include(s => s.Marca)
+                .AsNoTracking()
+                .FirstOrDefaultAsync(m => m.ProductoId == id);
 
-            var producto = await _context.Producto.FirstOrDefaultAsync(m => m.ProductoId == id);
             if (producto == null)
             {
                 return NotFound();
