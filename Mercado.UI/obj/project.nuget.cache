@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "NKgn0i7C4r6a6I4KQaCzC2+xm0hBtyn23CPTQmCIY1zFrL/RdkFLJseF9ved9ZRveg8xLnP3caTICXa7468sUg==",
+  "dgSpecHash": "51OnGCKqNMwly/V4I03Oadrc2NjrkK0Z1cTzw2OABY2CroVZkaFjbx5NN9bfNoDD9msGBQJHPm5PL/c972lkXw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Usuario\\source\\repos\\Mercado\\Mercado.UI\\Mercado.UI.csproj",
   "expectedPackageFiles": [
@@ -8,6 +8,7 @@
     "C:\\Users\\Usuario\\.nuget\\packages\\messagepack\\2.1.152\\messagepack.2.1.152.nupkg.sha512",
     "C:\\Users\\Usuario\\.nuget\\packages\\messagepack.annotations\\2.1.152\\messagepack.annotations.2.1.152.nupkg.sha512",
     "C:\\Users\\Usuario\\.nuget\\packages\\messagepackanalyzer\\2.1.152\\messagepackanalyzer.2.1.152.nupkg.sha512",
+    "C:\\Users\\Usuario\\.nuget\\packages\\microsoft.aspnetcore.diagnostics.entityframeworkcore\\6.0.6\\microsoft.aspnetcore.diagnostics.entityframeworkcore.6.0.6.nupkg.sha512",
     "C:\\Users\\Usuario\\.nuget\\packages\\microsoft.aspnetcore.razor.language\\6.0.0\\microsoft.aspnetcore.razor.language.6.0.0.nupkg.sha512",
     "C:\\Users\\Usuario\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\5.0.0\\microsoft.bcl.asyncinterfaces.5.0.0.nupkg.sha512",
     "C:\\Users\\Usuario\\.nuget\\packages\\microsoft.build\\17.0.0\\microsoft.build.17.0.0.nupkg.sha512",

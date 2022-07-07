@@ -15,5 +15,8 @@ namespace Mercado.core.Models
         [StringLength(25)]
         [Display(Name = "Nombre de la Marca")]
         public string? NombreMarca { get; set; }
+
+        public virtual ICollection<ProveedoresxMarcas>? ProveedoresxMarcas { get; set; }
+
     }
 }

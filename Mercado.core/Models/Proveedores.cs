@@ -23,5 +23,7 @@ namespace Mercado.core.Models
         [Display(Name = "Dirección del Proveedor")]
         public string? Direccion { get; set; }
         public Marca? Marca { get; set; }
+        //La siguiente línea sirve para que proveedoresxmarcas lo pueda acceder.
+        public virtual ICollection<ProveedoresxMarcas>? ProveedoresxMarcas { get; set; }
     }
 }

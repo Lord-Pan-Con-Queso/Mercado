@@ -263,3 +263,4 @@ C:\Users\Usuario\source\repos\Mercado\Mercado.UI\obj\Debug\net6.0\refint\Mercado
 C:\Users\Usuario\source\repos\Mercado\Mercado.UI\obj\Debug\net6.0\Mercado.UI.pdb
 C:\Users\Usuario\source\repos\Mercado\Mercado.UI\obj\Debug\net6.0\Mercado.UI.genruntimeconfig.cache
 C:\Users\Usuario\source\repos\Mercado\Mercado.UI\obj\Debug\net6.0\ref\Mercado.UI.dll
+C:\Users\Usuario\source\repos\Mercado\Mercado.UI\bin\Debug\net6.0\Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.dll

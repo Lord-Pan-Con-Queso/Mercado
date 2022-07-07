@@ -23,6 +23,26 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Usuario/source/repos/Mercado/Mercado.UI/Pages/Marcas/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWFyY2FzXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Usuario/source/repos/Mercado/Mercado.UI/Pages/Marcas/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWFyY2FzXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Usuario/source/repos/Mercado/Mercado.UI/Pages/Marcas/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWFyY2FzXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Usuario/source/repos/Mercado/Mercado.UI/Pages/Marcas/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWFyY2FzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Usuario/source/repos/Mercado/Mercado.UI/Pages/Marcas/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWFyY2FzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Usuario/source/repos/Mercado/Mercado.UI/Pages/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -45,6 +65,26 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/Usuario/source/repos/Mercado/Mercado.UI/Pages/Productos/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZHVjdG9zXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Usuario/source/repos/Mercado/Mercado.UI/Pages/Proveedores/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvdmVlZG9yZXNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Usuario/source/repos/Mercado/Mercado.UI/Pages/Proveedores/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvdmVlZG9yZXNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Usuario/source/repos/Mercado/Mercado.UI/Pages/Proveedores/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvdmVlZG9yZXNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Usuario/source/repos/Mercado/Mercado.UI/Pages/Proveedores/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvdmVlZG9yZXNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Usuario/source/repos/Mercado/Mercado.UI/Pages/Proveedores/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvdmVlZG9yZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Usuario/source/repos/Mercado/Mercado.UI/Pages/Shared/_ValidationScriptsPartial.cshtml]
