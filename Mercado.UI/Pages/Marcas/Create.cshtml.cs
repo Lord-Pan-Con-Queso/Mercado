@@ -13,7 +13,6 @@ namespace Mercado.UI.Pages.Marcas
     public class CreateModel : PageModel
     {
         private readonly Mercado.UI.Data.MercadoContext _context;
-
         public CreateModel(Mercado.UI.Data.MercadoContext context)
         {
             _context = context;
@@ -26,20 +25,21 @@ namespace Mercado.UI.Pages.Marcas
 
         [BindProperty]
         public Marca Marca { get; set; } = default!;
-        
 
         // To protect from overposting attacks, see https://aka.ms/RazorPagesCRUD
         public async Task<IActionResult> OnPostAsync()
         {
-          if (!ModelState.IsValid || _context.Marca == null || Marca == null)
+            var emptyMarca = new Marca();
+            if (await TryUpdateModelAsync<Marca>(
+            emptyMarca,
+            "marca", //Prefijo para el valor del formulario.
+            s => s.NombreMarca))
             {
-                return Page();
+                _context.Marca.Add(emptyMarca);
+                await _context.SaveChangesAsync();
+                return RedirectToPage("./Index");
             }
-
-            _context.Marca.Add(Marca);
-            await _context.SaveChangesAsync();
-
-            return RedirectToPage("./Index");
+            return Page();
         }
     }
 }

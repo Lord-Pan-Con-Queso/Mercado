@@ -30,7 +30,7 @@ namespace Mercado.UI.Pages.Proveedores
             //Las siguientes líneas sirven para que se muestren los detalles de la marca del producto también.
             var proveedor = await _context.Proveedor
                 .Include(s => s.ProveedoresxMarcas)
-                .ThenInclude(e => e.Marcas)
+                .ThenInclude( i => i.Marcas)
                 .AsNoTracking()
                 .FirstOrDefaultAsync(m => m.ProveedorId == id);
 

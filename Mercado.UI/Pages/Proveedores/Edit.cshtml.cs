@@ -25,53 +25,38 @@ namespace Mercado.UI.Pages.Proveedores
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
-            if (id == null || _context.Proveedor == null)
+            if (id == null)
             {
                 return NotFound();
             }
 
-            var proveedor =  await _context.Proveedor.FirstOrDefaultAsync(m => m.ProveedorId == id);
-            if (proveedor == null)
+            Proveedor = await _context.Proveedor.FindAsync(id);
+            if (Proveedor == null)
             {
                 return NotFound();
             }
-            Proveedor = proveedor;
             return Page();
         }
 
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see https://aka.ms/RazorPagesCRUD.
-        public async Task<IActionResult> OnPostAsync()
+        public async Task<IActionResult> OnPostAsync(int id)
         {
-            if (!ModelState.IsValid)
+            var proveedorToUpdate = await _context.Proveedor.FindAsync(id);
+            if (proveedorToUpdate == null)
             {
-                return Page();
+                return NotFound();
             }
-
-            _context.Attach(Proveedor).State = EntityState.Modified;
-
-            try
+            if (await TryUpdateModelAsync<Proveedor>(
+            proveedorToUpdate,
+                "proveedor",
+            s => s.NombreProveedor, s => s.Direccion, s => s.Tel))
             {
                 await _context.SaveChangesAsync();
+                return RedirectToPage("./Index");
             }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!ProveedorExists(Proveedor.ProveedorId))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
-
-            return RedirectToPage("./Index");
-        }
-
-        private bool ProveedorExists(int id)
-        {
-          return (_context.Proveedor?.Any(e => e.ProveedorId == id)).GetValueOrDefault();
+            return Page();
         }
     }
 }
+
